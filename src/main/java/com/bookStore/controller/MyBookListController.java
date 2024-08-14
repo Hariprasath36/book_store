@@ -9,14 +9,13 @@ import com.bookStore.service.MyBookListService;
 
 @Controller
 public class MyBookListController {
+	
 	@Autowired
 	private MyBookListService service;
 	
-	
 	@RequestMapping("/deleteMyList/{id}")
-	public String deleteMYList(@PathVariable("id")int id) {
+	public String deleteMyList(@PathVariable("id") int id) {
 		service.deleteById(id);
 		return "redirect:/my_books";
 	}
-
 }

@@ -16,13 +16,12 @@ public class MyBookListService {
 	
 	public void saveMyBooks(MyBookList book) {
 		mybook.save(book);
-		
 	}
 	
 	public List<MyBookList> getAllMyBooks(){
 		return mybook.findAll();
 	}
-    
+	
 	public void deleteById(int id) {
 		mybook.deleteById(id);
 	}

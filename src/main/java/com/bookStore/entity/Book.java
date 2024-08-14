@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Book{
+public class Book {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -16,7 +16,7 @@ public class Book{
 	private String price;
 	public Book(int id, String name, String author, String price) {
 		super();
-		this.id =  id;
+		this.id = id;
 		this.name = name;
 		this.author = author;
 		this.price = price;
@@ -28,7 +28,6 @@ public class Book{
 	public int getId() {
 		return id;
 	}
-
 	public void setId(int id) {
 		this.id = id;
 	}
