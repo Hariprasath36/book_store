@@ -45,13 +45,13 @@ public class BookController {
 
 	@PostMapping("/save")
 	public String addBook(@ModelAttribute Book b) {
-		System.out.println("11111111111111111");
+		
 		service.save(b);
 		
 		return "redirect:/available_book";
 	}
 	@GetMapping("/my_books")
-	public String getMyBook(Model model) {
+	public String getMyBooks(Model model) {
 		List<MyBookList>list=myBookService.getAllMyBooks();
 		model.addAttribute("book",list);
 		return "myBooks";

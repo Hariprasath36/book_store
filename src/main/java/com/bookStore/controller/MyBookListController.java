@@ -13,8 +13,8 @@ public class MyBookListController {
 	private MyBookListService service;
 	
 	
-	@RequestMapping("/deleteMylist/{id}")
-	public String deleteMYlist(@PathVariable("id")int id) {
+	@RequestMapping("/deleteMyList/{id}")
+	public String deleteMYList(@PathVariable("id")int id) {
 		service.deleteById(id);
 		return "redirect:/my_books";
 	}
